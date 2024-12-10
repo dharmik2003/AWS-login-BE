@@ -13,7 +13,7 @@ const PORT = 5001;
 AppDataSource.initialize()
   .then(async () => {
     console.log(`${SUCCESS_MESSAGES._SUCCESSFULLY("Database Conntected")}`);
-    app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+    app.use(cors());
     app.use(bodyParser.json());
     // app.use(cookieParser());
     app.use("/", router);
