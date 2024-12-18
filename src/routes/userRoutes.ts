@@ -5,8 +5,8 @@ import { loginValidator } from "../validators/auth/login.validators";
 
 const router = express.Router();
 
-router.post("/signup", signupValidator, Signup);
-router.post("/login", loginValidator, Login);
+router.post("/signup", Signup);
+router.post("/login", Login);
 router.get("/users", getUserList);
 
 router.get("/", (req, res) => {
